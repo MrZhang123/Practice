@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        .screen{
+            width: 800px;
+            height: 400px;
+            border: 1px solid #000;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            margin-top: -200px;
+            overflow: hidden;
+        }
+        .box{
+            height: 100%;
+            transform: translate(-800px,0);
+        }
+        .item{
+            width: 800px;
+            height: 400px;
+            float: left;
+            overflow: hidden;
+        }
+        .item img{
+            width: 110%;
+        }
+        .dot-box{
+            width: 100px;
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            margin:0 0 0 -50px;
+            z-index: 10;
+            padding: 0;
+            list-style: none;
+            overflow: hidden;
+        }
+        .dot-box li{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            line-height: 20px;
+            text-align: center;
+            color: #fff;
+            float: left;
+            cursor: pointer;
+        }
+        .dot-box li.active{
+            background-color: #fff;
+            color: #000;
+        }
+        .dot-box li:not(:nth-of-type(1)){
+            margin-left: 4px;
+        }
+        .left,.right{
+            width: 80px;
+            height: 100px;
+            background-color: #000;
+            position: absolute;
+            top: 50%;
+            margin-top: -50px;
+            z-index: 20;
+            opacity: 0.5;
+            line-height: 100px;
+            text-align: center;
+            color: #fff;
+            font-size: 36px;
+            cursor: pointer;
+        }
+        .left{
+            left: 0;
+        }
+        .right{
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="screen">
+        <div class="box">
+            <div class="item">
+                <img src="./pec/5.jpg"> 
+            </div>
+            <div class="item">
+                <img src="./pec/2.jpg"> 
+            </div>
+            <div class="item">
+                <img src="./pec/3.jpg"> 
+            </div>
+            <div class="item">
+                <img src="./pec/4.jpg"> 
+            </div>
+            <div class="item">
+                <img src="./pec/5.jpg"> 
+            </div>
+            <div class="item">
+                <img src="./pec/2.jpg"> 
+            </div>
+        </div>
+        <ul class="dot-box">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <div class="left">左</div>
+        <div class="right">右</div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
